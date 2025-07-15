@@ -1,38 +1,42 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const PORT = 3000
 const hostname = 'localhost'
+const PORT = process.env.PORT
 
-const entregaController = require('./controller/entrega.controller')
-const fabricanteController = require('./controller/fabricante.controller')
-const produtoController = require('./controller/produto.controller')
+const CompraController = require('./Controller/compra.controller')
+const ProdutoController = require('./Controller/produto.controller')
+const UsuarioController = require('./Controller/Usuario.controller')
 const conn = require('./db/conn')
 
-// ------------ MiddlleWare ------------------
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors())
-// -------------------------------------------
 
-app.post('/fabricante', fabricanteController.cadastrar)
-app.get('/fabricante', fabricanteController.listar)
-app.delete('/fabricante/:id', fabricanteController.apagar)
-app.put('/fabricante/:id', fabricanteController.atualizar)
+app.post('/compra', CompraController.cadastrar)
+app.get('/Compra', CompraController.listar)
+app.delete('/Compra/:id', CompraController.apagar)
+app.put('/Compra/:id', CompraController.atualizar)
 
-app.post('/entrega', entregaController.cadastrar)
-app.get('/entrega', entregaController.listar)
+app.post('/Usuario', UsuarioController.cadastrar)
+app.get('/Usuario', UsuarioController.listar)
+app.delete('/Usuario/:id', UsuarioController.apagar)
+app.put('/Usuario/:id', UsuarioController.atualizar)
 
-app.post('/produto', produtoController.cadastrar)
-app.get('/produto', produtoController.listar)
+
+app.post('/Produto', ProdutoController.cadastrar)
+app.get('/Produto', ProdutoController.listar)
+app.delete('/Produto/:id', ProdutoController.apagar)
+app.put('/Produto/:id', ProdutoController.atualizar)
+
 
 
 app.get('/', (req,res)=>{
     res.status(200).json({message: "Aplicação rodando!"})
 })
 
-// -------------------------------------------
 conn.sync()
 .then(()=>{
     app.listen(PORT, hostname, ()=>{
