@@ -1,11 +1,9 @@
 let res = document.getElementById('res')
 
-let atualFab = document.getElementById('atualFab')
+let button = document.getElementById('button')
 
-atualFab.addEventListener('click', (e)=>{
+button.addEventListener('click', (e)=>{
     e.preventDefault()
-
-    let compra_id = document.getElementById("id")
     let produto_id = document.getElementById("produto_id").value
     let usuario_id = document.getElementById("usuario_id").value
     let quant = document.getElementById("quant").value
@@ -29,8 +27,8 @@ atualFab.addEventListener('click', (e)=>{
     }
     res.innerHTML = ''
 
-    fetch(`http://localhost:3000/compra/${compra_id}`,{
-        method: 'PUT',
+    fetch(`http://localhost:3000/compra`,{
+        method: 'POST',
         headers: {
             'Content-Type':'application/json'
         },
@@ -38,10 +36,9 @@ atualFab.addEventListener('click', (e)=>{
     })
     .then(resp => resp.json())
     .then(dados =>{
-        console.log(dados)
-        res.innerHTML += `Dados atualizados com sucesso`
+        res.innerHTML += `O cadastro foi realizado com sucesso <br>`
     })
     .catch((err)=>{
-        console.error('Erro ao atualizar o fabricante!',err)
+        console.error('Erro ao cadastrar o compra!',err)
     })
 })
