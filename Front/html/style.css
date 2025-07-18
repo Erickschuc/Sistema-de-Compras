@@ -1,0 +1,186 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Body centralizado */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+/* Main centralizado com largura expandida */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Navegação */
+nav {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1db954;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Formulário */
+form {
+    background-color: #1e1e1e;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    color: #cfcfcf;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    color: white;
+}
+
+/* Botão */
+button {
+    background-color: #e53935;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c62828;
+}
+
+/* Resultado */
+#res {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #90caf9;
+    text-align: center;
+}
+
+/* Página principal - Área de links */
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+/* Caixas de seção: Compras, Produtos, Usuários */
+.box {
+    background-color: #1f1f1f;
+    padding: 25px 20px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+    
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.box h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+}
+
+/* Links das caixas */
+.box a {
+    display: block;
+    margin: 10px 0;
+    color: #90caf9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.box a:hover {
+    color: #1db954;
+    transform: translateX(5px);
+}
+
+/* Responsividade */
+@media (max-width: 950px) {
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        max-width: 90%;
+    }
+}
