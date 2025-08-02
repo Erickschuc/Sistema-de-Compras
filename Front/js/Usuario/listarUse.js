@@ -11,18 +11,19 @@ button.addEventListener("click", (e) => {
         .then(resp => resp.json())
         .then(dados => {
             dados.forEach(dad =>{
-            res.innerHTML = 
-            ` 
-                Código:${dad.usuarioId}><br>
-                Primeiro nome:${dad.firstName}><br>      
-                Sobrenome:${dad.lastName}><br>
-                idade:${dad.age}><br>
-                email:${dad.email}><br>
-                telefone${dad.phone}><br>
-                cidade:${dad.city}><br>
-                estado${dad.state}><br>
-                data de nascimento:${dad.birthDate}
-            `
+            res.innerHTML =
+        `
+            Codigo unico:${dad.id} <br>
+            Nome:${dad.primeiro_nome} <br>
+            Sobrenome:${dad.sobrenome} <br>
+            Idade:${dad.idade} <br>
+            Email:${dad.email} <br>
+            Telefone:${dad.telefone} <br>
+            Endereço:${dad.endereco} <br>
+            Cidade:${dad.cidade} <br>
+            Estado:${dad.estado} <br>
+            Data de Nascimento:${dad.data_nascimento} <br>
+        `
         })
     })
 })

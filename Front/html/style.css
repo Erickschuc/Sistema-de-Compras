@@ -22,31 +22,11 @@ main {
     margin: 0 auto;
 }
 
-nav {
-    background-color: #1f1f1f;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
-}
-
-nav a {
-    background-color: #2c2c2c;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-    background-color: #444;
-    transform: scale(1.05);
+form {
+    background-color: #1e1e1e;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 h1 {
@@ -56,13 +36,6 @@ h1 {
     color: #ffffff;
 }
 
-form {
-    background-color: #1e1e1e;
-    padding: 25px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-}
-
 label {
     font-size: 14px;
     display: block;
@@ -70,31 +43,33 @@ label {
     color: #cfcfcf;
 }
 
+#res {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #90caf9;
+    text-align: center;
+}
+
 input[type="text"],
 input[type="date"],
+input[type="number"],
+input[type="file"],
 select {
-    width: 100%;
+    width: 250px;
     padding: 10px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
     border: none;
     border-radius: 5px;
     background-color: #2b2b2b;
     color: #ffffff;
     outline: none;
+    display: block;
 }
 
-input[type="text"]::placeholder {
+input::placeholder {
     color: #888;
 }
 
-select {
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-    color: white;
-}
 
 button {
     background-color: #e53935;
@@ -130,11 +105,31 @@ button:hover {
     background-color: #444;
 }
 
-#res {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #90caf9;
-    text-align: center;
+nav {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+nav a {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+    transform: scale(1.05);
 }
 
 .links {
@@ -193,3 +188,7 @@ button:hover {
         max-width: 90%;
     }
 }
+
+
+
+

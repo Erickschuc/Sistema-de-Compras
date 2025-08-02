@@ -12,11 +12,11 @@ const Produto = db.define('Produto', {
         allowNull: false
     },
     descricao: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     categoria: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     preco: {
@@ -33,6 +33,10 @@ const Produto = db.define('Produto', {
     },
     marca: {
         type: DataTypes.STRING(50),
+        allowNull: false
+    },
+    thumbnail: {
+        type: DataTypes.STRING(255),
         allowNull: false
     }
 }, {

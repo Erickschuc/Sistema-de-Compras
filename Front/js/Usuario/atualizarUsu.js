@@ -34,15 +34,15 @@ button.addEventListener("click", (e)=>{
     .then(()=>{
         res.innerHTML = 
         `
-            Codigo Unico:${usuarioId}><br>
-            Nome:${firstName}><br>
-            Sobrenome:${lastName}><br>
-            Idade:${age}><br>
-            Email:${email}><br>
-            Telefone:${phone}><br>
-            Cidade:${city}><br>
-            Estado:${state}><br>
-            Data de Nascimento:${birthDate}><br>
+            Codigo Unico:${usuarioId}<br>
+            Nome:${firstName}<br>
+            Sobrenome:${lastName}<br>
+            Idade:${age}<br>
+            Email:${email}<br>
+            Telefone:${phone}<br>
+            Cidade:${city}<br>
+            Estado:${state}<br>
+            Data de Nascimento:${birthDate}<br>
         `
     })
 })

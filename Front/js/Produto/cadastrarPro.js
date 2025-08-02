@@ -14,13 +14,13 @@ button.addEventListener("click", (e)=>{
     let thumbnail = document.getElementById("thumbnail").value
 
     const valores = {
-        title: title,
-        description: description,
-        category: category,
-        price: price,
-        discountPercentage: discountPercentage,
-        stock: stock,
-        brand: brand,
+        titulo: title,
+        descricao: description,
+        categoria: category,
+        preco: price,
+        percentual_desconto: discountPercentage,
+        estoque: stock,
+        marca: brand,
         thumbnail: thumbnail
     }
 
@@ -33,14 +33,14 @@ button.addEventListener("click", (e)=>{
     .then(()=>{
         res.innerHTML = 
         `
-            Nome:${title}><br>
-            descrição:${description}><br>
-            categoria:${category}><br>
-            preço:${price}><br>
-            desconto:${discountPercentage}><br>
-            estoque:${stock}><br>
-            marca:${brand}><br>
-            <img src="${thumbnail}">><br>
+            Nome:${title}<br>
+            descrição:${description}<br>
+            categoria:${category}<br>
+            preço:${price}<br>
+            desconto:${discountPercentage}<br>
+            estoque:${stock}<br>
+            marca:${brand}<br>
+            <img src="${thumbnail}"<br>
         `
     })
 })

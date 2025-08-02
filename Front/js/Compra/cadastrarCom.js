@@ -35,15 +35,15 @@ button.addEventListener("click", (e)=>{
     .then(()=>{
         res.innerHTML = 
         `
-            Produto ID:${produto_id}><br>
-            Usuário ID:${usuario_id}><br>
-            Quantidade$:{quant}><br>
-            Data da Compra:${dataCompra}><br>
-            Preço Unitário:${unitario}><br>
-            Desconto:${desconto}><br>
-            Preço Final:${precoFinal}><br>
-            Forma de Pagamento:${formaPag}><br>
-            Status:${status}><br>
+            Produto ID:${produto_id}<br>
+            Usuário ID:${usuario_id}<br>
+            Quantidade$:{quant}<br>
+            Data da Compra:${dataCompra}<br>
+            Preço Unitário:${unitario}<br>
+            Desconto:${desconto}<br>
+            Preço Final:${precoFinal}<br>
+            Forma de Pagamento:${formaPag}<br>
+            Status:${status}<br>
             `
     })
 })

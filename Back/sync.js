@@ -1,3 +1,4 @@
+require('dotenv').config()
 const conn = require('./db/conn')
 const { Fabricante, Produto, Entrega } = require('./model/rel')
 

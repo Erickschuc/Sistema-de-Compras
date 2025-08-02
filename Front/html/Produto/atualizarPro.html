@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <script src="../../js/Compra/atualizarCom.js" defer></script>
+    <script src="../../js/Produto/atualizarPro.js" defer></script>
     <title>Atualizar</title>
 </head>
 <body>
@@ -12,27 +12,35 @@
     <nav>
         <a href="../index.html">Voltar</a>
     </nav>
-    <h1>Cadastro da Compra</h1>
+    <h1>Cadastro da Produto</h1>
     <form>
             <label for="produtoId">Digite o codigo unico do produto</label><br>
             <input type="number" id="produtoId"><br><br>
-            <button id="buscar">buscar</button><br><br>
+
             <label for="title">Digite o nome do produto</label><br>
             <input id="title" placeholder="Exemplo: caixa de framboesa"><br><br>
+
             <label for="description">Digite a descrição do produto</label><br>
             <input id="description"><br><br>
+
             <label for="category">Digite a categoria do produto</label><br>
             <input id="category" type="text"><br><br>
+
             <label for="price">Digite o preço do produto</label><br>
             <input id="price"><br><br>
+
             <label for="discountPercentage">Digite o desconto do produto</label><br>
             <input id="discountPercentage" type="text"><br><br>
+
             <label for="stock">Digite a quantidade de Produtos</label><br>
             <input id="stock" type="number"><br><br>
+
             <label for="brand">Digite a marca do produto</label><br>
             <input id="brand"><br><br>
+
             <label for="thumbnail">Coloque a iamgem do produto</label><br>
             <input id="thumbnail" type="text"><br><br>
+
             <button id="button">atualizar</button>
             <div id="res"></div>
         </main>
